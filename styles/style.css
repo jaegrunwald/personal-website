@@ -6,7 +6,6 @@ body {
   color: #2d2d2d;
   line-height: 1.7;
   font-weight: 400;
-  min-height: 100vh;
 }
 
 nav {
@@ -24,31 +23,24 @@ nav ul {
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 0.5rem;
 }
 
 nav ul li {
-  margin: 0;
+  margin: 0 2rem;
 }
 
 nav ul li a {
   color: #5d4e37;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.75rem 0.75rem;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   transition: all 0.3s ease;
   position: relative;
-  display: block;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
 }
 
 nav ul li a.active,
@@ -58,7 +50,7 @@ nav ul li a:hover {
 }
 
 header {
-  padding: 3rem 1rem 2rem 1rem;
+  padding: 6rem 2rem 4rem 2rem;
   text-align: center;
   background: transparent;
   max-width: 1200px;
@@ -66,7 +58,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
   background: linear-gradient(135deg, #5d4e37, #8b7355);
@@ -80,7 +72,7 @@ main {
   max-width: 1200px;
   margin: 0 auto;
   background: transparent;
-  padding: 0 1rem 2rem 1rem;
+  padding: 0 2rem 4rem 2rem;
 }
 
 h1, h2, h3 {
@@ -90,7 +82,7 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -101,16 +93,15 @@ h3 {
 
 .profile-section {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
+  border-radius: 24px;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(139, 115, 85, 0.1);
-  box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
-  text-align: center;
+  box-shadow: 0 20px 40px rgba(139, 115, 85, 0.1);
 }
 
 .profile-image {
@@ -121,20 +112,20 @@ h3 {
 }
 
 .profile-image img {
-  width: 200px;
-  height: 200px;
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid rgba(139, 115, 85, 0.2);
   display: block;
   transition: all 0.4s ease;
-  box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
+  box-shadow: 0 20px 40px rgba(139, 115, 85, 0.2);
 }
 
 .profile-image img:hover {
   border-color: #8b7355;
   transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(139, 115, 85, 0.3);
+  box-shadow: 0 30px 60px rgba(139, 115, 85, 0.3);
 }
 
 .image-placeholder {
@@ -153,13 +144,13 @@ h3 {
 .profile-content h2 {
   margin-top: 0;
   color: #5d4e37;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .profile-content p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #5d4e37;
   margin-bottom: 1.5rem;
   line-height: 1.8;
@@ -170,113 +161,30 @@ h3 {
   display: none;
 }
 
-/* Tablet styles */
-@media (min-width: 768px) {
-  nav {
-    padding: 1.5rem 0;
-  }
-  
-  nav ul {
-    gap: 1rem;
-  }
-  
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    font-size: 1.1rem;
-    padding: 1rem 1.5rem;
-  }
-  
-  header {
-    padding: 4rem 2rem 3rem 2rem;
-  }
-  
-  header h1 {
-    font-size: 3.5rem;
-  }
-  
-  main {
-    padding: 0 2rem 3rem 2rem;
-  }
-  
-  h2 {
-    font-size: 2.25rem;
-  }
-  
+/* Responsive design for mobile */
+@media (max-width: 768px) {
   .profile-section {
-    grid-template-columns: 1fr 2fr;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    padding: 2.5rem;
-    border-radius: 20px;
-    text-align: left;
-  }
-  
-  .profile-image img {
-    width: 240px;
-    height: 240px;
-  }
-  
-  .profile-content h2 {
-    font-size: 2.75rem;
-  }
-  
-  .profile-content p {
-    font-size: 1.05rem;
-  }
-}
-
-/* Desktop styles */
-@media (min-width: 1024px) {
-  nav ul {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem;
     gap: 2rem;
   }
   
-  nav ul li {
-    margin: 0;
-  }
-  
-  nav ul li a {
-    font-size: 1.2rem;
-    padding: 1rem 1.5rem;
-  }
-  
-  header {
-    padding: 6rem 2rem 4rem 2rem;
-  }
-  
-  header h1 {
-    font-size: 4rem;
+  .profile-image img {
+    width: 200px;
+    height: 200px;
   }
   
   main {
-    padding: 0 2rem 4rem 2rem;
+    padding: 0 1rem 2rem 1rem;
   }
   
-  h2 {
+  header h1 {
     font-size: 2.5rem;
   }
   
-  .profile-section {
-    gap: 4rem;
-    margin-bottom: 4rem;
-    padding: 3rem;
-    border-radius: 24px;
-  }
-  
-  .profile-image img {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .profile-content h2 {
-    font-size: 3rem;
-  }
-  
-  .profile-content p {
-    font-size: 1.1rem;
+  h2 {
+    font-size: 2rem;
   }
 }
 
@@ -284,13 +192,13 @@ h3 {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   background: rgba(255, 255, 255, 0.6);
-  padding: 1.5rem;
-  border-radius: 16px;
+  padding: 3rem;
+  border-radius: 24px;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(139, 115, 85, 0.1);
-  box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
+  box-shadow: 0 20px 40px rgba(139, 115, 85, 0.1);
 }
 
 .contact-form label {
@@ -302,15 +210,14 @@ h3 {
 
 .contact-form input,
 .contact-form textarea {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
   border: 2px solid rgba(139, 115, 85, 0.1);
   border-radius: 12px;
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   font-family: inherit;
-  min-height: 44px;
 }
 
 .contact-form input:focus,
@@ -326,15 +233,14 @@ h3 {
   background: linear-gradient(135deg, #8b7355, #5d4e37);
   color: #f5f1e8;
   border: none;
-  padding: 1rem 2rem;
+  padding: 1.25rem 2.5rem;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
   box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
-  min-height: 44px;
 }
 
 .contact-form button:hover {
@@ -347,142 +253,34 @@ h3 {
   transform: translateY(-1px);
 }
 
-/* Tablet and desktop contact form adjustments */
-@media (min-width: 768px) {
-  .contact-form {
-    margin: 3rem auto;
-    padding: 2.5rem;
-    border-radius: 20px;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    margin-bottom: 2rem;
-    padding: 1.25rem;
-  }
-  
-  .contact-form button {
-    padding: 1.25rem 2.5rem;
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contact-form {
-    padding: 3rem;
-    border-radius: 24px;
-  }
-}
-
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   background: transparent;
   color: #8b7355;
-  margin-top: 3rem;
+  margin-top: 4rem;
   border-top: 1px solid rgba(139, 115, 85, 0.1);
   font-size: 0.9rem;
 }
 
-@media (min-width: 768px) {
-  footer {
-    padding: 3rem 1rem;
-    margin-top: 4rem;
-  }
-}
-
 /* Additional sections styling */
 section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  margin-bottom: 4rem;
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: 16px;
+  border-radius: 24px;
   backdrop-filter: blur(20px);
   border: 1px solid rgba(139, 115, 85, 0.1);
-  box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
+  box-shadow: 0 20px 40px rgba(139, 115, 85, 0.1);
 }
 
 section h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 section p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: #5d4e37;
-}
-
-@media (min-width: 768px) {
-  section {
-    margin-bottom: 3rem;
-    padding: 2.5rem;
-    border-radius: 20px;
-  }
-  
-  section h2 {
-    margin-bottom: 2rem;
-  }
-  
-  section p {
-    font-size: 1.05rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  section {
-    margin-bottom: 4rem;
-    padding: 3rem;
-    border-radius: 24px;
-  }
-  
-  section p {
-    font-size: 1.1rem;
-  }
-}
-
-/* Touch-friendly improvements for mobile */
-@media (max-width: 767px) {
-  /* Ensure all interactive elements are at least 44px tall for touch */
-  nav ul li a,
-  .contact-form button,
-  .contact-form input,
-  .contact-form textarea {
-    min-height: 44px;
-  }
-  
-  /* Improve spacing for mobile */
-  .profile-content p {
-    margin-bottom: 1rem;
-  }
-  
-  /* Reduce padding on mobile for better space usage */
-  .profile-section,
-  .contact-form,
-  section {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-}
-
-/* Landscape mobile improvements */
-@media (max-width: 767px) and (orientation: landscape) {
-  header {
-    padding: 2rem 1rem 1rem 1rem;
-  }
-  
-  .profile-section {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    text-align: left;
-  }
-  
-  .profile-image img {
-    width: 150px;
-    height: 150px;
-  }
-  
-  .profile-content h2 {
-    font-size: 2rem;
-  }
 } 
