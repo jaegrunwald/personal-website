@@ -65,11 +65,12 @@ header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.2;
+  line-height: 1.4;
   overflow: visible;
   text-overflow: clip;
   white-space: nowrap;
   letter-spacing: -0.02em;
+  padding-bottom: 0.5rem;
 }
 
 main {
